@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project.WepAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Project.WepAPI.Controllers.ProductController.Get">
+            <summary>
+            Get All Products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.ProductController.Get(System.Int32)">
+            <summary>
+            Get Products By ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.ProductController.Post(ProjectEntities.Product)">
+            <summary>
+            Create Products
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.ProductController.Put(ProjectEntities.Product)">
+            <summary>
+            Update Products  
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Delete Products
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.UserController.Get">
+            <summary>
+            Get All Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Get Users By ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.UserController.Post(ProjectEntities.User)">
+            <summary>
+            Create Users
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.UserController.Put(ProjectEntities.User)">
+            <summary>
+            Update Users  
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.WepAPI.Controllers.UserController.Delete(System.Int32)">
+            <summary>
+            Delete Users
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>
