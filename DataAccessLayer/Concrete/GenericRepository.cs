@@ -19,6 +19,10 @@ namespace DataAccessLayer.Concrete
             _object = c.Set<T>();
         }
 
+        public GenericRepository(ProjectDBContext ctx)
+        {
+            _object = c.Set<T>();
+        }
         public T Create(T t)
         {
             _object.Add(t);

@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using BusinessLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjectEntities;
@@ -8,69 +9,70 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Project.WepAPI.Controllers
+namespace Project.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    //[Authorize(Roles = "Admin")]
+    public class UsersController : ControllerBase
     {
-        private IService<Product> _product;
+        private IService<User> _user;
 
-        public ProductController()
+        public UsersController()
         {
-            _product = new Manager<Product>();
+            _user = new Manager<User>();
         }
         /// <summary>
-        /// Get All Products
+        /// Get All Users
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult  Get()
+        public IActionResult Get()
         {
-            return Ok(_product.GetAll());
+            return Ok(_user.GetAll());
         }
 
         /// <summary>
-        /// Get Products By ID
+        /// Get Users By ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public Product Get(int id)
+        public IActionResult Get(int id)
         {
-            return _product.GetByID(id);
+            return Ok(_user.GetByID(id));
         }
 
         /// <summary>
-        /// Create Products
+        /// Create Users
         /// </summary>
-        /// <param name="product"></param>
+        /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost]
-        public Product Post([FromBody] Product product)
+        public IActionResult Post([FromBody] User user)
         {
-            return _product.Create(product);
+            return Ok(_user.Create(user));
         }
 
         /// <summary>
-        /// Update Products  
+        /// Update Users  
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPut]
-        public Product Put([FromBody] Product product)
+        public IActionResult Put([FromBody] User user)
         {
-            return _product.Update(product);
+            return Ok(_user.Update(user));
         }
 
         /// <summary>
-        /// Delete Products
+        /// Delete Users
         /// </summary>
         /// <param name="id"></param>
         [HttpDelete]
         public void Delete(int id)
         {
-            _product.Delete(id);
+            _user.Delete(id);
         }
     }
 }

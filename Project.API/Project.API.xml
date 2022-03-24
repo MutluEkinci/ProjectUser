@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Project.API</name>
+    </assembly>
+    <members>
+        <member name="M:Project.API.Controllers.AuthController.Register(ProjectEntities.UserRegisterViewModel)">
+            <summary>
+            Şifrede Bir büyük harf ,bir küçük harf ,bir sayı ve bir karakter olma zorunluluğu vardır...
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.ProductsController.Get">
+            <summary>
+            Get All Products
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.ProductsController.Get(System.Int32)">
+            <summary>
+            Get Products By ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.ProductsController.Post(ProjectEntities.Product)">
+            <summary>
+            Create Products
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.ProductsController.Put(ProjectEntities.Product)">
+            <summary>
+            Update Products  
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Delete Products
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Project.API.Controllers.UsersController.Get">
+            <summary>
+            Get All Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Get Users By ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.UsersController.Post(ProjectEntities.User)">
+            <summary>
+            Create Users
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.UsersController.Put(ProjectEntities.User)">
+            <summary>
+            Update Users  
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Project.API.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete Users
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>

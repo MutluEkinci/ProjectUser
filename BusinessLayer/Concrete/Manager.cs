@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Abstract;
+﻿using DataAccessLayer;
+using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
 using ProjectEntities;
 using System;
@@ -15,7 +16,8 @@ namespace BusinessLayer.Concrete
 
         public Manager()
         {
-            _repo = new GenericRepository<T>();
+            ProjectDBContext db = new ProjectDBContext();
+            _repo = new GenericRepository<T>(db);
         }
 
         public T Create(T t)
